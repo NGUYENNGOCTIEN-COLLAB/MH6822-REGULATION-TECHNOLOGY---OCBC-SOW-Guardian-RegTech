@@ -1,0 +1,115 @@
+rules:
+  - rule_id: SG-AI-MRM-001
+    jurisdiction: Singapore
+    source: MAS AI Model Risk Management Information Paper 2024
+    domain: AI governance and model risk management
+    trigger:
+      system_type: [generative_ai, agentic_ai, non_generative_ai]
+      use_case: [KYC, source_of_wealth, AML_due_diligence]
+    control_action:
+      - require_ai_inventory_record
+      - require_model_owner
+      - require_intended_use_statement
+      - require_human_in_the_loop_design
+      - require_hallucination_testing
+      - require_output_accuracy_monitoring
+      - require_data_quality_review
+      - require_model_drift_monitoring
+      - require_audit_pack
+    risk_weight: 30
+    human_review_required: true
+    effective_date: 2024-12-05
+    version: 1.0
+    status: active
+
+  - rule_id: SG-AML-626-001
+    jurisdiction: Singapore
+    source: MAS Notice 626
+    domain: AML/CFT
+    trigger:
+      customer_type: [private_banking_client, corporate_client, high_net_worth_individual, legal_entity]
+    control_action:
+      - require_customer_due_diligence
+      - require_source_of_wealth_evidence
+      - require_risk_assessment
+      - require_enhanced_due_diligence_if_high_risk
+      - require_ongoing_monitoring_trigger
+    risk_weight: 35
+    human_review_required: true
+    effective_date: 2024-03-28
+    version: 1.0
+    status: active
+
+  - rule_id: SG-FEAT-001
+    jurisdiction: Singapore
+    source: MAS FEAT Principles and Veritas initiative
+    domain: responsible_ai
+    trigger:
+      system_type: [generative_ai, agentic_ai, non_generative_ai]
+    control_action:
+      - require_fairness_check
+      - require_accountability_owner
+      - require_output_explainability
+      - require_transparency_to_internal_users
+      - require_human_review_record
+    risk_weight: 15
+    human_review_required: true
+    effective_date: 2018-11-12
+    version: 1.0
+    status: active
+
+  - rule_id: US-CDD-FINCEN-001
+    jurisdiction: United States
+    source: FinCEN CDD Rule
+    domain: AML/CFT and customer due diligence
+    trigger:
+      customer_type: [legal_entity, corporate_client, high_risk_customer]
+    control_action:
+      - identify_and_verify_customer
+      - identify_and_verify_beneficial_owner_when_required
+      - understand_nature_and_purpose_of_relationship
+      - develop_customer_risk_profile
+      - conduct_ongoing_monitoring
+    risk_weight: 30
+    human_review_required: true
+    effective_date: 2018-05-11
+    version: 2.0
+    status: active
+
+  - rule_id: US-MRM-SR26-2-001
+    jurisdiction: United States
+    source: Federal Reserve SR 26-2 / interagency model risk guidance
+    domain: model risk management
+    trigger:
+      system_type: [traditional_statistical_model, quantitative_model, non_generative_ai]
+    control_action:
+      - require_model_inventory_record
+      - require_model_purpose_statement
+      - require_validation_plan
+      - require_monitoring_thresholds
+      - require_effective_challenge
+      - require_model_risk_owner_signoff
+    risk_weight: 25
+    human_review_required: true
+    effective_date: 2026-04-17
+    version: 1.0
+    status: active
+
+  - rule_id: US-AI-GAP-001
+    jurisdiction: United States
+    source: SR 26-2 / OCC Bulletin 2026-13 scope note
+    domain: AI governance and model risk boundary
+    trigger:
+      system_type: [generative_ai, agentic_ai]
+    control_action:
+      - do_not_mark_as_fully_covered_by_SR26_2
+      - issue_governance_gap_warning
+      - require_internal_ai_policy_review
+      - require_aml_compliance_owner_approval
+      - require_model_risk_committee_notification
+      - require_human_final_approval
+    risk_weight: 40
+    human_review_required: true
+    effective_date: 2026-04-17
+    version: 1.0
+    status: active
