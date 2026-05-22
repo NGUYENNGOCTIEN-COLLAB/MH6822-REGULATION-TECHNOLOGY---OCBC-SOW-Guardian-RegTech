@@ -5,6 +5,7 @@ Matriculation ID: M2506667B
 Email: NGOCTIEN001@E.NTU.EDU.SG
 
 Data collaboration: None. Synthetic data was created individually for this submission.
+Recording link: https://github.com/NGUYENNGOCTIEN-COLLAB/MH6822-REGULATION-TECHNOLOGY---OCBC-SOW-Guardian-RegTech/blob/main/Homework_1.mp3
 
 ## Project overview
 
